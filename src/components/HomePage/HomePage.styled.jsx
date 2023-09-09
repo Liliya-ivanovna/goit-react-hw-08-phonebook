@@ -32,13 +32,13 @@ export const ContentBox = styled.div`
     transform: translate(-50%, -50%);
   }
 
-  h2:nth-child(1) {
+  h2:nth-of-type(1) {
     color: transparent;
-    -webkit-text-stroke: 2px #0970e7;
+    -webkit-text-stroke: 2px #020a14;
   }
 
-  h2:nth-child(2) {
-    color: #d5d5f6;
-    rotate: 360 deg;
+  h2:nth-of-type(2) {
+    color:  #0970e7;
+    
   }
-`;
+  `
