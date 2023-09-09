@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Loader } from './Loader/Loader';
 import { AppRoutes } from 'config/routes';
 import { refreshUser } from 'redux/auth/authOperations';
-import { ComponentAppBar } from './AppBar';
+import { ComponentHeader } from './AppBar';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ export const App = () => {
 
   return (
     <>
-      <ComponentAppBar />
+      <ComponentHeader />
       <Container>
         <Suspense fallback={<Loader />}>
           <AppRoutes />

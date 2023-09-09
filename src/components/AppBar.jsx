@@ -6,7 +6,8 @@ import { Home } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
 import { HOME_ROUTE } from 'config/routes';
 
-export const ComponentAppBar = () => {
+export const ComponentHeader = () => {
+    
   const autenticated = useSelector(selectIsAutenticated);
 
   return (
