@@ -15,7 +15,7 @@ export const ContactList = () => {
   };
 
   return (
-    <Ul>
+    <Ul >
       {onAddFilter().map(contact => {
         return <ContactItem key={contact.id} contact={contact} />;
       })}

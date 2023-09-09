@@ -1,18 +1,20 @@
 import { lazy } from 'react';
 import { RestrictedRoute } from 'components/RestrictedRoute/RestrictedRoute';
 import { PrivateRoute } from 'components/PrivateRoute/PrivateRoute';
+import { Route, Routes } from 'react-router-dom';
 
 const Home = lazy(() => import('pages/Home'));
 const Registration = lazy(() => import('pages/Registration'));
 const Login = lazy(() => import('pages/Login'));
 const Contacts = lazy(() => import('pages/Contacts'));
+const NotFound = lazy(() => import('pages/NotFound'));
 
 export const HOME_ROUTE = '/';
 export const REGISTER_ROUTE = '/register';
 export const LOGIN_ROUTE = '/login';
 export const CONTACTS_ROUTE = '/contacts';
 
-export const appRoutes = [
+const routes = [
   {
     path: HOME_ROUTE,
     element: <Home />,
@@ -42,3 +44,16 @@ export const appRoutes = [
     ),
   },
 ];
+
+export const AppRoutes = () => {
+  return (
+    <>
+      <Routes>
+        {routes.map(({ path, element }) => (
+          <Route key={path} path={path} element={element} />
+        ))}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
+  );
+};
