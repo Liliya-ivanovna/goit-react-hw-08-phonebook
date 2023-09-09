@@ -10,9 +10,7 @@ export const ContactItem = ({ contact: { id, name, phone } }) => {
     <Li>
       <Span>{name}</Span>
       <Span> {phone}</Span>
-      <Button 
-      onClick={() =>  dispatch(deleteContact(id))}
-      >Delete</Button>
+      <Button onClick={() => dispatch(deleteContact(id))}>Delete</Button>
     </Li>
   );
 };

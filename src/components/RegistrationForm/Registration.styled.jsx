@@ -1,25 +1,24 @@
 import styled from '@emotion/styled';
 
-export const Li = styled.li`
+export const Form = styled.form`
+  padding: 50px;
+  flex-direction: column;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  max-width: 500px;
+  border: 1px solid black;
+  margin: 50px auto;
 `;
-
 export const Button = styled.button`
-  width: 70px;
+  margin-top: 30px;
+  padding: 10px;
+  width: 150px;
   background-color: #0970e7;
   font-size: 18px;
-  border-radius: 8px;
+  border-radius: 14px;
   color: white;
   font-weight: bold;
   &:hover {
     background-color: black;
   }
-`;
-
-export const Span = styled.span`
-  font-weight: 500;
-  font-size: 19px;
 `;
